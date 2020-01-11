@@ -1,0 +1,2 @@
+ Average value of GBP on 2020-01-10 is: 5.002 PLN 
+ Average value of USD on 2020-01-10 is: 3.8272 PLN 
