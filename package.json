@@ -1,17 +1,24 @@
 {
-  "name": "project-api",
+  "name": "project-API",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonsGoneCoding/NODE---API-projects-in-command-line.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonsGoneCoding/NODE---API-projects-in-command-line/issues"
+  },
+  "homepage": "https://github.com/simonsGoneCoding/NODE---API-projects-in-command-line#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "node-fetch": "^2.6.0",
-    "request": "^2.88.0"
+    "minimist": "^1.2.0"
   }
 }
