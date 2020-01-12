@@ -40,7 +40,7 @@ const handleData = (type, title) => {
   const data = fs.readFileSync("data.json", "utf8");
   // let data = fs.readFileSync("data.json", "utf8");
   // data = data.toString();
-  const tasks = JSON.parse(data);
+  let tasks = JSON.parse(data);
   // console.log(tasks);
   let doesExist = "";
 
@@ -56,7 +56,11 @@ const handleData = (type, title) => {
   let dataJSON = "";
   switch (type) {
     case 1:
-      console.log("adding...");
+      // rebuild array to aviod errors with id
+      tasks = tasks.map((task, index) => ({
+        id: index + 1,
+        title: task.title
+      }));
       const id = tasks.length + 1;
       tasks.push({ id, title });
       // console.log(tasks);
@@ -67,10 +71,15 @@ const handleData = (type, title) => {
       break;
 
     case 2:
-      console.log("removing...");
+      // console.log("removing...");
       const index = tasks.findIndex(task => task.title === title);
       tasks.splice(index, 1);
-      console.log(tasks);
+      // console.log(tasks);
+      // rebuidl array to avoid errors with id...
+      tasks = tasks.map((task, index) => ({
+        id: index + 1,
+        title: task.title
+      }));
       dataJSON = JSON.stringify(tasks);
       fs.writeFile("data.json", dataJSON, "utf8", err => {
         if (err) throw err;

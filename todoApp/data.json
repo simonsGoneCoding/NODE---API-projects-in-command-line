@@ -1,1 +1,6 @@
-[{"id":1,"title":"buy milk"},{"id":2,"title":"buy beer"}]
+[
+  { "id": 1, "title": "buy milk" },
+  { "id": 2, "title": "walk the dog" },
+  { "id": 3, "title": "water the plants" },
+  { "id": 4, "title": "cook something interesting" }
+]
