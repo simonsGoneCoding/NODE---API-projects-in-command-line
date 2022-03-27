@@ -19,6 +19,6 @@
   "homepage": "https://github.com/simonsGoneCoding/NODE---API-projects-in-command-line#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.6"
   }
 }
